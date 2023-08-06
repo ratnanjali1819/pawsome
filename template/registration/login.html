@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style2.css">
+
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">PetAdoption</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{%url 'website'%}">HOME</a></li>
+                    <li><a href="{%url 'about'%}">ABOUT</a></li>
+                    <li><a href="{%url 'service'%}">SERVICE</a></li>
+                    <li><a href="{%url 'contact'%}">CONTACT</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="form">
+            <h2>Login</h2>
+            <form  method="post">
+            {%csrf_token%}
+            <p>
+                <label for="id_username">Username:</label>
+                <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username" placeholder="Enter User Id Here">
+                
+                
+              </p>
+            
+              
+              <p>
+                <label for="id_password">Password:</label>
+                <input type="password" name="password" autocomplete="current-password" required id="id_password" placeholder="Enter Password Here">
+                
+                
+                  
+                
+              </p>
+            <input class="btnn" type="submit" value="login"><br><br>
+            <p style="color: aliceblue;">don't have an account <a href="{%url 'register'%}">register</a> here</p>
+        </form></div>
+
+    </div>
+</body>
+</html>

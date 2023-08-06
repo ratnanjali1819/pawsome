@@ -1,0 +1,88 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services</title>
+    <link rel="stylesheet" href="/static/style3.css">
+    <style>
+      ul li a{
+        color: #0cac1c;
+      }
+    body,html {
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding:30px;
+      width: 400px;
+      margin: 50px auto;
+      padding-right:5%;
+      padding-left:5%;
+      background-color: #d08544;
+      padding-top:5%;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-align:center;
+    }
+    .card p {
+      font-size: 16px;
+      text-align:left;
+    }
+  </style>
+</head>
+<body>
+    <div class="main">
+          <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">PetAdoption</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{%url 'website'%}">HOME</a></li>
+                    <li><a href="{%url 'about'%}">ABOUT</a></li>
+                    <li><a href="{%url 'service'%}">SERVICE</a></li>
+                    <li><a href="{%url 'help'%}">HELP?</a></li>
+                    <li><a href="{%url 'contact'%}">CONTACT</a></li>
+                </ul>
+            </div>
+            {%if user.is_authenticated%}
+            <div class="search">
+                <a href="/accounts/logout"> <button class="btn">Logout</button></a>
+            </div>
+            {%endif%}
+          </div>
+
+         {%for dogs in dog%}
+         <div class="card">
+         <img src="{{dogs.dogPicture.url}}" alt="Card Image">
+         <h2>Dog Breed:{{dogs.dogName}}</h2>
+         <p>
+         Age:{{dogs.dogAge}} <br>
+         Contact:{{dogs.gaurdianContact}} <br>
+         Health Description:{{dogs.healthDescription}} 
+         </p>
+        </div>
+    {% comment %} <div class="container">
+        <img src="{{dogs.dogPicture.url}}" alt="blablabla">
+        {{dogs.dogName}} {{dogs.dogAge}} <br>
+        {{dogs.gaurdianContact}} <br>
+        {{dogs.healthDescription}} 
+    </div>
+    <hr> {% endcomment %}
+        {%endfor%}
+     </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pet adoption Home</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">PetAdoption</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{%url 'website'%}">HOME</a></li>
+                    <li><a href="{%url 'about'%}">ABOUT</a></li>
+                    <li><a href="{%url 'service'%}">SERVICE</a></li>
+                    <li><a href="{%url 'help'%}">HELP?</a></li>
+                    <li><a href="{%url 'contact'%}">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div >
+                {%if user.is_authenticated%}
+            <div class="search">
+                <a href="/accounts/logout"> <button class="btn">Logout</button></a>
+            </div>
+            {%else%}
+            <div class="search">
+                <a href="/accounts/login"> <button class="btn">Login</button></a>
+            </div>
+{%endif%}
+            </div>
+
+        </div>
+        <div class="content">
+            <h1>Foster<br><span>Pet Care</span> <br>SAVE PET LIVES!!</h1>
+            <p class="par">Welcome to our website dedicated to fostering pet care! Here, you will find everything you
+                need to <br>provide your furry friend with the best possible care. From tips on nutrition and exercise
+                to advice<br> on grooming and behavior, our experts are here to help you every step of the way.<br> Join
+                our community of pet lovers and give your companion the happy, healthy life they deserve.</p>
+
+            <button class="cn"><a href="#">JOIN US</a></button>
+
+            
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+
+</html>

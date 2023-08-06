@@ -1,0 +1,89 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/static/style4.css">
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+              }
+              h1{
+                padding-top: 3%;
+	           text-align: center;
+	             padding-left: 1%;
+              }
+              .center {
+                width: 400px;
+                margin: 50px auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color:rgb(183, 107, 107);
+                padding-right:5%;
+                padding-left:4%;
+                background-color: #d08544;
+                }
+                
+              
+              .card {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+              }
+              
+              .card input[type="text"],
+              .card input[type="email"],
+              .card input[type="password"] {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+              }
+              .card input[type="submit"] {
+                background-color: rgb(19, 188, 44);
+                color: #fff;
+                border: none;
+                border-radius: 3px;
+                padding: 10px 15px;
+                cursor: pointer;
+              }
+              
+              .card input[type="submit"]:hover {
+                background-color:#02490d;
+              }
+              
+              .card .error-message {
+                color: #ff0000;
+                margin-top: 5px;
+              }
+              
+              .card .login-link {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+              }
+        </style>   
+    </head>
+    <body>
+            <header>
+                <h1>REGISTER</h1>
+            </header>
+        <div class="center">
+            <form method="post" novaldiate class="card">
+                {% csrf_token %}
+              <h2 class="text-center">Create your Account</h2>
+              {{ form.as_p }}  
+              <br>
+              <input type="submit" value="Register" >
+              <hr>
+              <p class="text-center">Already have an account? <a href="/accounts/login">Login Here</a></p>
+              </form>
+          </div>
+        </div>  
+    </body>
+    </html>

@@ -1,0 +1,104 @@
+body,
+html {
+	height: 100%
+}
+
+.img {
+	background-image: url("img3.webp");
+	min-height: 380px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+h1 {
+	padding-top: 3%;
+	text-align: left;
+	padding-bottom: 1%;
+	padding-left: 15%;
+}
+
+h2 {
+	padding-left: 10%;
+
+}
+
+ul li {
+	list-style-type: disc;
+	padding-top: 5px;
+	padding-left: 1%;
+	font-size: 21px;
+}
+
+ul li a {
+	color: #0b0b0b;
+	font-family: Arial;
+	transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+	color: #02490d;
+}
+
+.content {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	max-width: 90%;
+	margin-right: 70%;
+	right: 0;
+	position: absolute;
+	box-sizing: border-box;
+}
+
+p {
+	padding-left: 75%;
+	padding-top: 45%;
+}
+
+input[type=text] {
+	width: 50%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+
+textarea {
+	width: 85%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+
+input[type=email] {
+	width: 50%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+
+input[type=submit]:hover {
+	background-color: rgb(19, 188, 44);
+}
+
+input[type=submit] {
+	background-color: #04AA6D;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
